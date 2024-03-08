@@ -27,7 +27,7 @@ public class TargetX : MonoBehaviour
     }
 
     // When target is clicked, destroy it, update score, and generate explosion
-    private void OnMouseEnter()
+    private void OnMouseDown()
     {
         if (gameManagerX.isGameActive)
         {
@@ -57,7 +57,7 @@ public class TargetX : MonoBehaviour
 
 
     // If target that is NOT the bad object collides with sensor, trigger game over
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerDown(Collider other)
     {
         Destroy(gameObject);
 
